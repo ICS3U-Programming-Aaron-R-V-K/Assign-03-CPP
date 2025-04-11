@@ -1,5 +1,7 @@
 // Copyright (2025) Aaron Rivelino All rights reserved.
 // Date: April 9, 2025
+// The code determines the air quality level
+// based on the user input AQI value
 
 #include <iostream>
 #include <string>
@@ -13,7 +15,7 @@ int main() {
     std::cout << "Enter a number between 0 and 500 to check air quality.\n"
               << std::endl;
 
-    // Get user for input
+    // Get user input as a string
     std::cout << "Enter the AQI number: ";
     std::cin >> aqiStr;
 
