@@ -26,7 +26,7 @@ int main() {
     try {
         // Convert the string input to a Float and
         // then covert it to an integer by rounding
-        // the decimal to the nearest number 
+        // the decimal to the nearest number
         aqiFloat = std::stof(aqiStr);
         aqiInt = round(aqiFloat);
 
