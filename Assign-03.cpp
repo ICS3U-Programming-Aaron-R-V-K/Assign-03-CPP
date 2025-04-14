@@ -1,25 +1,34 @@
 // Copyright (2025) Aaron Rivelino All rights reserved.
 // Date: April 9, 2025
+// The code determines the air quality level
+// based on the user input AQI value
 
 #include <iostream>
 #include <string>
+#include <cmath>
 
 int main() {
+    // Defines the variables
     std::string aqiStr;
     int aqiInt;
+    float aqiFloat;
 
     // Intro message to the user
-    std::cout << "Welcome to the Air Quality Index (AQI) Checker!" << std::endl;
+    std::cout
+        << "Welcome to the Air Quality Index (AQI) Checker!" << std::endl;
     std::cout << "Enter a number between 0 and 500 to check air quality.\n"
               << std::endl;
 
-    // Get user for input
+    // Get user input as a string
     std::cout << "Enter the AQI number: ";
     std::cin >> aqiStr;
 
     try {
-        // Convert the string input to an integer
-        aqiInt = std::stoi(aqiStr);
+        // Convert the string input to a Float and
+        // then covert it to an integer by rounding
+        // the decimal to the nearest number 
+        aqiFloat = std::stof(aqiStr);
+        aqiInt = round(aqiFloat);
 
         // Check if the AQI number is in the valid range
         if (aqiInt < 0 || aqiInt > 500) {
